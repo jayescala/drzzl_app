@@ -1,0 +1,11 @@
+body {
+  background-color: gray;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.heroImage {
+  width: 100%;
+}
