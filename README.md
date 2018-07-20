@@ -65,4 +65,4 @@ Please reach out to either myself, David Kolia, or Jay Escala for contributing o
 
 ## Acknowledgments
 
-* We'd like to thank General Assembly for the free coffee, Reuben Ayres for the guidance, OpenWeatherApp for the API, and of course you the user. <3
+We'd like to thank General Assembly for the free coffee, Reuben Ayres for the guidance, OpenWeatherApp for the API, and of course you the user. <3
