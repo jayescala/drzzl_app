@@ -16,10 +16,13 @@ drzzl works with your web browser to pull your local forecast. Scroll down furth
 
 ## User Stories
 
-* Users may visit drzzl to check the forecast
-* Users may click accounts to register with a username and email, allowing them to add photos, artwork and comments
-* Users may visit drzzl.io to see a rando assortment of inspirational and enjoyable rainy day photos and artwork
-* Users may click one of those images to view it on a separate page at a larger size, as well as any comments or to leave one of their own
+* Users sees current local forecast on homepage
+* Users click accounts to go to page
+* Users click register to create account
+* Users click sign on to log in
+* Logged in users can add photos/art
+* Logged in users can comment on photos/art
+
 
 
 ## Wireframes
@@ -37,7 +40,7 @@ Below is a selection of wireframes we drew up while designing this app. Please e
 
 ## Built With
 
-* ![Kanban Flow](https://i.imgur.com/a/XPEm1tx.jpg)
+* ![Kanban Flow](https://i.imgur.com/6pTb0QF.jpg)
 
 * [Node.js](https://nodejs.org/en/) - Node.js is the JavaScript runtime built on Chrome's V8 JavaScript engine
 * [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
@@ -56,7 +59,7 @@ Below is a selection of wireframes we drew up while designing this app. Please e
 
 ## Contributing
 
-Please reach out to either myself, David Kolia, or Jay Escuela for contributing or with any questions.
+Please reach out to either myself, David Kolia, or Jay Escala for contributing or with any questions.
 
 
 
