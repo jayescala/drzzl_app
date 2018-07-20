@@ -26,18 +26,18 @@ drzzl works with your web browser to pull your local forecast. Scroll down furth
 
 Below is a selection of wireframes we drew up while designing this app. Please enjoy!
 
-* ![Wireframe](https://imgur.com/xO99MeX)
-* ![Wireframe](https://imgur.com/1EQHij0)
-* ![Wireframe](https://imgur.com/3F4uSMd)
-* ![Wireframe](https://imgur.com/xbKRq5r)
-* ![Wireframe](https://imgur.com/dfXbaF4)
-* ![Wireframe](https://imgur.com/mWBOH8M)
+* ![Wireframe](https://i.imgur.com/xO99MeX.jpg)
+* ![Wireframe](https://i.imgur.com/1EQHij0.jpg)
+* ![Wireframe](https://i.imgur.com/3F4uSMd.jpg)
+* ![Wireframe](https://i.imgur.com/xbKRq5r.jpg)
+* ![Wireframe](https://i.imgur.com/dfXbaF4.jpg)
+* ![Wireframe](https://i.imgur.com/mWBOH8M.jpg)
 
 
 
 ## Built With
 
-* ![Kanban Flow](https://imgur.com/a/XPEm1tx)
+* ![Kanban Flow](https://i.imgur.com/a/XPEm1tx.jpg)
 
 * [Node.js](https://nodejs.org/en/) - Node.js is the JavaScript runtime built on Chrome's V8 JavaScript engine
 * [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
@@ -63,5 +63,3 @@ Please reach out to either myself, David Kolia, or Jay Escuela for contributing 
 ## Acknowledgments
 
 * We'd like to thank General Assembly for the free coffee, Reuben Ayres for the guidance, OpenWeatherApp for the API, and of course you the user. <3
-
-
