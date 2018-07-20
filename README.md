@@ -29,18 +29,18 @@ drzzl works with your web browser to pull your local forecast. Scroll down furth
 
 Below is a selection of wireframes we drew up while designing this app. Please enjoy!
 
-* ![Wireframe](https://i.imgur.com/xO99MeX.jpg)
-* ![Wireframe](https://i.imgur.com/1EQHij0.jpg)
-* ![Wireframe](https://i.imgur.com/3F4uSMd.jpg)
-* ![Wireframe](https://i.imgur.com/xbKRq5r.jpg)
-* ![Wireframe](https://i.imgur.com/dfXbaF4.jpg)
-* ![Wireframe](https://i.imgur.com/mWBOH8M.jpg)
+![Wireframe](https://i.imgur.com/xO99MeX.jpg)
+![Wireframe](https://i.imgur.com/1EQHij0.jpg)
+![Wireframe](https://i.imgur.com/3F4uSMd.jpg)
+![Wireframe](https://i.imgur.com/xbKRq5r.jpg)
+![Wireframe](https://i.imgur.com/dfXbaF4.jpg)
+![Wireframe](https://i.imgur.com/mWBOH8M.jpg)
 
 
 
 ## Built With
 
-* ![Kanban Flow](https://i.imgur.com/6pTb0QF.jpg)
+![Kanban Flow](https://i.imgur.com/6pTb0QF.jpg)
 
 * [Node.js](https://nodejs.org/en/) - Node.js is the JavaScript runtime built on Chrome's V8 JavaScript engine
 * [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
