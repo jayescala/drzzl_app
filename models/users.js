@@ -2,6 +2,7 @@
 const mongoose = require("mongoose");
 const Password = require("./passwords.js");
 const Content = require("./contents.js");
+const Comment = require("./comments.js");
 
 // Schema
 const userSchema = new mongoose.Schema({
@@ -18,7 +19,8 @@ const userSchema = new mongoose.Schema({
   createdBy: String,
   modifiedDate: Date,
   modifiedBy: String,
-  contents: [Content.schema]
+  contents: [Content.schema],
+  comments: [Comment.schema]
 });
 
 // Exports
