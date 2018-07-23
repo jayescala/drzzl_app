@@ -2,34 +2,56 @@ body {
   margin: 0px;
   padding: 0px;
 }
-
 .heroImage {
   background-image: url("../images/heroImages/drzzlHero3.jpg");
   background-size: cover;
   width: 100vw;
   height: 100vh;
 }
+.heroPage {
+  display: flex;
+  align-items: flex-start;
+}
 
+.navBar {
+  width: 100vw;
+  height: 6vh;
+  margin: 0 auto;
+  padding: 0;
+  background-color: rgba(7,37,50,.8);
+  color: #fdfff8;
+  font-size: 1.3em;
+  font-family: "helvetica light", helvetica, arial, sans-serif;
+  text-shadow: 1px 1px 3px #000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+}
 
-
+.navBar a {
+  font-family: "quicksand", sans-serif;
+  text-decoration: none;
+  margin: 0 25px;
+  font-size: 1.2em;
+}
 
 /* Overlay Styles */
 .heroOverlay {
   width: 100vw;
   height: 100vh;
   background-color: rgba(37,67,80,.4);
+  display: flex;
+  align-items: flex-start;
 }
-
 .galleryOverlay {
   height: 50vh;
   background-color: rgba(160,182,171,.4);
 }
-
 .aboutOverlay {
   height: 50vh;
   background-color: rgba(79,113,126,.4);
 }
-
 .contactOverlay {
   height: 70vh;
   background-color: rgba(80,102,91,.8);
@@ -46,7 +68,6 @@ body {
   margin: 0px;
   padding: 0px;
 }
-
 h3 {
   font-size: 4em;
   color: #fdfff8;
@@ -55,7 +76,6 @@ h3 {
   text-shadow: 3px 3px 15px #000;
   margin: 0;
 }
-
 h4 {
   font-size: 2.5em;
   color: #fdfff8;
@@ -64,14 +84,12 @@ h4 {
   text-shadow: 3px 3px 15px #000;
   margin: 0;
 }
-
 p {
   font-size: 1.3em;
   color: #fdfff8;
   text-align: center;
   text-shadow: 2px 2px 5px #000;
 }
-
 a {
   color: #d8e1c8;
 }
@@ -107,7 +125,6 @@ div {
   flex-flow: column;
   color: #fdfff8;
 }
-
 .quote {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 4.5em;
@@ -115,7 +132,6 @@ div {
   padding: 0 60px;
   margin: 0;
 }
-
 .citation {
   font-family: quicksand, sans-serif;
   font-weight: 100;
@@ -142,18 +158,15 @@ div {
   height: 70vh;
   background-image: url("../images/heroImages/drzzlHero1.jpg");
 }
-
 .contactUs {
   /* display: flex; */
   flex-flow: column;
 }
-
 .contactDavid {
   height: 30vh;
   flex-flow: column;
   margin: 0 20px;
 }
-
 .contactJay {
   height: 30vh;
   flex-flow: column;
@@ -173,16 +186,14 @@ footer {
   bottom:0px;
   height: 8vh;
   width:100%;
-  background-color: rgba(37,67,80,.5);
+  background-color: rgba(7,37,50,.8);
 }
-
 footer p {
   color: #fdfff8;
   font-size: 1.3em;
   font-family: "helvetica light", helvetica, arial, sans-serif;
     text-shadow: 1px 1px 3px #000;
 }
-
 footer a {
   color: #fdfff8;
   font-family: "helvetica light", helvetica, arial, sans-serif;
