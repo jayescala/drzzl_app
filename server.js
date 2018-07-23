@@ -27,6 +27,24 @@ app.use(session({
 app.get("/", (req, res) => {
   res.render("home/home.ejs");
 });
+  // Login Page
+app.post("/login", async (req, res) => {
+  const loginUsername = Users.find({username: req.body.username});
+  if(loginUsername === true){
+    if(bcrypt.compareSync(req.body.password, username.password)){
+      req.session.username = req.body.username;
+      req.session.loggedIn = true;
+      req.session.message = "";
+      res.redirect("/");
+    } else {
+      req.session.message = "The password you have entered is incorrect.";
+      res.redirect("/login");
+    }
+  } else {
+    req.session.message = "The username you had entered does not match any existing accounts.";
+    res.redirect("/login");
+  }
+});
 
 // Port Setup
 const port = 3000.
