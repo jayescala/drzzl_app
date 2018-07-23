@@ -10,29 +10,34 @@ body {
   height: 100vh;
 }
 
+
+
+
+/* Overlay Styles */
 .heroOverlay {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(37,67,80,.2);
+  background-color: rgba(37,67,80,.4);
 }
 
 .galleryOverlay {
-  width: 100vw;
   height: 50vh;
-  background-color: rgba(160,182,171,.2);
+  background-color: rgba(160,182,171,.4);
 }
 
 .aboutOverlay {
-  width: 100vw;
   height: 50vh;
-  background-color: rgba(79,113,126,.2);
+  background-color: rgba(79,113,126,.4);
 }
 
 .contactOverlay {
-  width: 100vw;
-  height: 58vh;
-  background-color: rgba(160,182,171,.2);
+  height: 70vh;
+  background-color: rgba(80,102,91,.8);
+  display: flex;
+  flex-flow: column;
 }
+/* End of Overlay Styles */
+
 
 
 
@@ -43,16 +48,28 @@ body {
 }
 
 h3 {
-  font-size: 3em;
+  font-size: 4em;
   color: #fdfff8;
   font-family: quicksand, sans-serif;
-  text-shadow: 5px 5px 20px #000;
+  font-weight: 350;
+  text-shadow: 3px 3px 15px #000;
+  margin: 0;
+}
+
+h4 {
+  font-size: 2.5em;
+  color: #fdfff8;
+  font-family: quicksand, sans-serif;
+  font-weight: 100;
+  text-shadow: 3px 3px 15px #000;
+  margin: 0;
 }
 
 p {
   font-size: 1.3em;
   color: #fdfff8;
   text-align: center;
+  text-shadow: 2px 2px 5px #000;
 }
 
 a {
@@ -62,7 +79,6 @@ a {
 
 /* Common Div Styles */
 div {
-  height: 50vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -75,6 +91,7 @@ div {
 
 /* Gallery Div Styles */
 .galleryDiv {
+  height: 50vh;
   background-color: #a0b6ab;
   background-image: url("../images/heroImages/drzzlHero6.jpg");
 }
@@ -83,6 +100,7 @@ div {
 
 /* Quote Div Styles */
 .quoteDiv {
+  height: 50vh;
   background-color: #254350;
   display: flex;
   justify-content: center;
@@ -111,6 +129,7 @@ div {
 
 /* About Div Styles */
 .aboutDiv {
+  height: 50vh;
   background-color: #d8e1c8;
   background-image: url("../images/heroImages/drzzlHero2.jpg");
 }
@@ -120,9 +139,25 @@ div {
 
 /* Contact Div Styles */
 .contactDiv {
-  height: 58vh;
+  height: 70vh;
   background-image: url("../images/heroImages/drzzlHero1.jpg");
-  flex-wrap: wrap;
+}
+
+.contactUs {
+  /* display: flex; */
+  flex-flow: column;
+}
+
+.contactDavid {
+  height: 30vh;
+  flex-flow: column;
+  margin: 0 20px;
+}
+
+.contactJay {
+  height: 30vh;
+  flex-flow: column;
+  margin: 0 20px;
 }
 /* End of Contact Div Styles */
 
