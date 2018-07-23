@@ -13,6 +13,12 @@ body {
   align-items: flex-start;
 }
 
+.svg {
+  filter: invert(1);
+  margin: 10px;
+}
+
+
 .navBar {
   width: 100vw;
   height: 6vh;
@@ -53,10 +59,11 @@ body {
   background-color: rgba(79,113,126,.4);
 }
 .contactOverlay {
-  height: 70vh;
+  height: 78vh;
   background-color: rgba(80,102,91,.8);
   display: flex;
   flex-flow: column;
+  align-items: flex-start;
 }
 /* End of Overlay Styles */
 
@@ -82,7 +89,7 @@ h4 {
   font-family: quicksand, sans-serif;
   font-weight: 100;
   text-shadow: 3px 3px 15px #000;
-  margin: 0;
+  margin: 75px 0 0 0;
 }
 p {
   font-size: 1.3em;
@@ -155,22 +162,24 @@ div {
 
 /* Contact Div Styles */
 .contactDiv {
-  height: 70vh;
+  height: 78vh;
   background-image: url("../images/heroImages/drzzlHero1.jpg");
 }
 .contactUs {
   /* display: flex; */
   flex-flow: column;
+
+  height: 22vh;
 }
 .contactDavid {
-  height: 30vh;
+  height: 40vh;
   flex-flow: column;
-  margin: 0 20px;
+  margin: 0 40px 100px 100px;
 }
 .contactJay {
-  height: 30vh;
+  height: 40vh;
   flex-flow: column;
-  margin: 0 20px;
+  margin: 0 0px 100px 100px;
 }
 /* End of Contact Div Styles */
 
