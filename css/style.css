@@ -10,58 +10,31 @@ body {
   height: 100vh;
 }
 
-.dimmer {
+.heroOverlay {
   width: 100vw;
   height: 100vh;
   background-color: rgba(37,67,80,.2);
 }
 
-.dimmer2 {
+.galleryOverlay {
   width: 100vw;
   height: 50vh;
   background-color: rgba(160,182,171,.2);
 }
 
-.dimmer3 {
+.aboutOverlay {
   width: 100vw;
   height: 50vh;
   background-color: rgba(79,113,126,.2);
 }
 
-.dimmer4 {
+.contactOverlay {
   width: 100vw;
   height: 58vh;
   background-color: rgba(160,182,171,.2);
 }
 
-ul {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-  overflow: hidden;
-  font-size: 1.3em;
-  font-family: "helvetica light", helvetica, arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: rgba(37,67,80,.5);
-  height: 5vh;
-  align-items: center;
-}
 
-li {
-    display: flex;
-    flex-flow: row;
-}
-
-li a {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    color: #fdfff8;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: 1px 1px 3px #000;
-}
 
 .hidden {
   visibility: hidden;
@@ -72,9 +45,7 @@ li a {
 h3 {
   font-size: 3em;
   color: #fdfff8;
-  text-align: center;
-  display: flex;
-  margin: 0;
+  font-family: quicksand, sans-serif;
   text-shadow: 5px 5px 20px #000;
 }
 
@@ -88,68 +59,76 @@ a {
   color: #d8e1c8;
 }
 
-.div1 {
+
+/* Common Div Styles */
+div {
   height: 50vh;
   width: 100vw;
-  background-color: #a0b6ab;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../images/heroImages/drzzlHero6.jpg");
   background-size: cover;
 }
+/* End of Common Div Styles */
 
-.divQuote {
-  height: 50vh;
-  width: 100vw;
+
+
+/* Gallery Div Styles */
+.galleryDiv {
+  background-color: #a0b6ab;
+  background-image: url("../images/heroImages/drzzlHero6.jpg");
+}
+/* End of Gallery Div Styles */
+
+
+/* Quote Div Styles */
+.quoteDiv {
   background-color: #254350;
   display: flex;
   justify-content: center;
   flex-flow: column;
-  text-align: center;
   color: #fdfff8;
-  font-size: 3em;
 }
 
 .quote {
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 1.3em;
+  font-size: 4.5em;
   font-weight: 200;
   padding: 0 60px;
   margin: 0;
-
 }
 
 .citation {
   font-family: quicksand, sans-serif;
   font-weight: 100;
-  font-size: 1em;
+  font-size: 2em;
   padding: 20px 0;
   margin: 0;
 }
+/* End of Quote Div Styles */
 
-.div2 {
-  height: 50vh;
-  width: 100vw;
+
+
+/* About Div Styles */
+.aboutDiv {
   background-color: #d8e1c8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-image: url("../images/heroImages/drzzlHero2.jpg");
-  background-size: cover;
 }
+/* End of About Div Styles */
 
-.div3 {
+
+
+/* Contact Div Styles */
+.contactDiv {
   height: 58vh;
-  width: 100vw;
-  /* display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center; */
   background-image: url("../images/heroImages/drzzlHero1.jpg");
-  background-size: cover;
+  flex-wrap: wrap;
 }
+/* End of Contact Div Styles */
 
+
+
+/* Footer Styles */
 footer {
   position: fixed;
   display: flex;
@@ -173,3 +152,4 @@ footer a {
   color: #fdfff8;
   font-family: "helvetica light", helvetica, arial, sans-serif;
 }
+/* End of Footer Styles */
