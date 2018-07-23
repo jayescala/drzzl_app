@@ -1,11 +1,94 @@
 body {
-  background-color: gray;
+  margin: 0px;
+  padding: 0px;
+}
+
+.heroImage {
+  background-image: url("../images/heroImages/drzzlHero3.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  overflow: hidden;
+  font-size: 1.2em;
+  font-family: "helvetica light", helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0,0,0,.7);
+}
+
+li {
+    display: flex;
+    flex-flow: row;
+}
+
+li a {
+    padding: 15px 10px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
 }
 
 .hidden {
   visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  z-index: -5;
 }
 
 .heroImage {
+  position: relative;
   width: 100%;
+}
+
+h3 {
+  font-size: 3em;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.div1 {
+  height: 500px;
+  width: 100%;
+  background-color: red;
+}
+
+.div2 {
+  height: 500px;
+  width: 100%;
+  background-color: green;
+}
+
+.div3 {
+  height: 500px;
+  width: 100%;
+  background-color: blue;
+}
+
+footer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left:0px;
+  bottom:0px;
+  height:100px;
+  width:100%;
+  background:black;
+}
+
+footer p {
+  color: white;
+  font-size: 1.2em;
+  font-family: "helvetica light", helvetica, arial, sans-serif;
+
 }
