@@ -2,26 +2,12 @@ body {
   margin: 0px;
   padding: 0px;
 }
-.heroImage {
-  background-image: url("../images/heroImages/drzzlHero3.jpg");
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-}
-.heroPage {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
 .svg {
   filter: invert(1);
-  margin: 10px;
+  margin: 25px;
   padding: 0px;
   width: 5vw;
 }
-
-
 .navBar {
   width: 100vw;
   height: 6vh;
@@ -37,53 +23,22 @@ body {
   align-items: center;
   list-style-type: none;
 }
-
 .navBar a {
   font-family: "quicksand", sans-serif;
   text-decoration: none;
   margin: 0 25px;
   font-size: 1.2em;
 }
+h1 {
 
+    font-size: 4em;
+    color: #fdfff8;
+    font-family: quicksand, sans-serif;
+    font-weight: 350;
+    text-shadow: 3px 3px 15px #000;
+    margin-top: 40px;
+    margin-bottom: 20px;
 
-.heroContent {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-
-
-
-/* Overlay Styles */
-.heroOverlay {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(37,67,80,.4);
-  display: flex;
-  align-items: flex-start;
-}
-.galleryOverlay {
-  height: 50vh;
-  background-color: rgba(160,182,171,.4);
-  flex-flow: column;
-}
-.aboutOverlay {
-  height: 50vh;
-  background-color: rgba(79,113,126,.4);
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-/* End of Overlay Styles */
-
-
-
-.hidden {
-  visibility: hidden;
-  margin: 0px;
-  padding: 0px;
 }
 h3 {
   font-size: 4em;
@@ -91,15 +46,24 @@ h3 {
   font-family: quicksand, sans-serif;
   font-weight: 350;
   text-shadow: 3px 3px 15px #000;
-  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 h4 {
   font-size: 2.5em;
   color: #fdfff8;
   font-family: quicksand, sans-serif;
-  font-weight: 100;
+  font-weight: 500;
   text-shadow: 3px 3px 15px #000;
-  margin: 75px 0 0 0;
+  margin: 0;
+}
+h5 {
+  font-size: 1.5em;
+  color: #fdfff8;
+  font-family: quicksand, sans-serif;
+  font-weight: 300;
+  text-shadow: 1px 1px 10px #000;
+  margin: 0;
 }
 p {
   font-size: 1.5em;
@@ -126,11 +90,61 @@ div {
 
 
 
+/* Hero Div Styles */
+.heroOverlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(37,67,80,.4);
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+.heroImage {
+  background-image: url("../images/heroImages/drzzlHero3.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.heroPage {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.heroContent {
+  display: flex;
+  align-items: center;
+}
+.raindrop {
+  width: 200px;
+}
+.drzzl {
+  filter: drop-shadow(3px 3px 10px #000);
+  /* width: 200px; */
+  justify-content: flex-start;
+}
+.tempt {
+  width: 30vw;
+}
+.weatherStatus {
+  width: 30vw;
+}
+
+
+/* End of Hero Div Styles */
+
+
+
 /* Gallery Div Styles */
 .galleryDiv {
   background-color: #a0b6ab;
   background-image: url("../images/heroImages/drzzlHero6.jpg");
   box-shadow: inset 0px 0px 0px 40px white;
+}
+.galleryOverlay {
+  height: 50vh;
+  background-color: rgba(160,182,171,.4);
+  flex-flow: column;
 }
 /* End of Gallery Div Styles */
 
@@ -168,7 +182,13 @@ div {
   background-color: #d8e1c8;
   background-image: url("../images/heroImages/drzzlHero2.jpg");
 }
-
+.aboutOverlay {
+  height: 50vh;
+  background-color: rgba(79,113,126,.4);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
 /* End of About Div Styles */
 
 
