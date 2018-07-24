@@ -69,7 +69,6 @@ body {
 
 
 
-
 .hidden {
   visibility: hidden;
   margin: 0px;
@@ -102,6 +101,7 @@ a {
 }
 
 
+
 /* Common Div Styles */
 div {
   width: 100vw;
@@ -121,6 +121,7 @@ div {
   background-image: url("../images/heroImages/drzzlHero6.jpg");
 }
 /* End of Gallery Div Styles */
+
 
 
 /* Quote Div Styles */
@@ -156,6 +157,14 @@ div {
   background-color: #d8e1c8;
   background-image: url("../images/heroImages/drzzlHero2.jpg");
 }
+.aboutTitle {
+  /* display: flex;
+  flex-flow: column; */
+}
+.aboutContent {
+  /* display: flex;
+  flex-flow: column; */
+}
 /* End of About Div Styles */
 
 
@@ -166,9 +175,7 @@ div {
   background-image: url("../images/heroImages/drzzlHero1.jpg");
 }
 .contactUs {
-  /* display: flex; */
   flex-flow: column;
-
   height: 22vh;
 }
 .contactDavid {
@@ -179,7 +186,7 @@ div {
 .contactJay {
   height: 40vh;
   flex-flow: column;
-  margin: 0 0px 100px 100px;
+  margin: 0 60px 100px 100px;
 }
 /* End of Contact Div Styles */
 
