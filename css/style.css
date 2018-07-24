@@ -17,7 +17,7 @@ body {
   filter: invert(1);
   margin: 10px;
   padding: 0px;
-  width: 10vw;
+  width: 5vw;
 }
 
 
@@ -55,6 +55,9 @@ body {
 .galleryOverlay {
   height: 50vh;
   background-color: rgba(160,182,171,.4);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 .aboutOverlay {
   height: 50vh;
@@ -124,6 +127,9 @@ div {
   height: 50vh;
   background-color: #a0b6ab;
   background-image: url("../images/heroImages/drzzlHero6.jpg");
+  /* display: flex;
+  align-items: center;
+  flex-flow: row; */
 }
 /* End of Gallery Div Styles */
 
@@ -158,19 +164,10 @@ div {
 
 /* About Div Styles */
 .aboutDiv {
-  height: 50vh;
   background-color: #d8e1c8;
   background-image: url("../images/heroImages/drzzlHero2.jpg");
-  display: inline-flex;
-  justify-content: space-around;
 }
-.aboutTitle {
-  display: flex;
-  justify-content: center;
-}
-.aboutContent {
-  flex-flow: row;
-}
+
 /* End of About Div Styles */
 
 
