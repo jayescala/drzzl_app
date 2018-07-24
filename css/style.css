@@ -55,9 +55,7 @@ body {
 .galleryOverlay {
   height: 50vh;
   background-color: rgba(160,182,171,.4);
-  display: flex;
   flex-flow: column;
-  align-items: center;
 }
 .aboutOverlay {
   height: 50vh;
@@ -124,12 +122,9 @@ div {
 
 /* Gallery Div Styles */
 .galleryDiv {
-  height: 50vh;
   background-color: #a0b6ab;
   background-image: url("../images/heroImages/drzzlHero6.jpg");
-  /* display: flex;
-  align-items: center;
-  flex-flow: row; */
+  box-shadow: inset 0px 0px 0px 40px white;
 }
 /* End of Gallery Div Styles */
 
