@@ -16,6 +16,8 @@ body {
 .svg {
   filter: invert(1);
   margin: 10px;
+  padding: 0px;
+  width: 10vw;
 }
 
 
@@ -57,6 +59,9 @@ body {
 .aboutOverlay {
   height: 50vh;
   background-color: rgba(79,113,126,.4);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 .contactOverlay {
   height: 78vh;
@@ -156,14 +161,15 @@ div {
   height: 50vh;
   background-color: #d8e1c8;
   background-image: url("../images/heroImages/drzzlHero2.jpg");
+  display: inline-flex;
+  justify-content: space-around;
 }
 .aboutTitle {
-  /* display: flex;
-  flex-flow: column; */
+  display: flex;
+  justify-content: center;
 }
 .aboutContent {
-  /* display: flex;
-  flex-flow: column; */
+  flex-flow: row;
 }
 /* End of About Div Styles */
 
