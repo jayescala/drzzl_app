@@ -1,5 +1,5 @@
 // Imports
-const require = require("express");
+const express = require("express");
 const bcrypt = require("bcrypt");
 
 // Models
@@ -8,11 +8,11 @@ const Contents = require("../models/contents.js");
 const Comments = require("../models/comments.js");
 
 // Router
-const router = express.Router;
+const router = express.Router();
 
 // Routes
   // Render Index Page
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   const foundUsers = await Users.find({});
   res.render("user/index.ejs", {
     users: foundUsers
@@ -37,15 +37,22 @@ router.get("/update/:id", async (req, res) => {
   });
 });
   // Create User
-router.post("/", async (req, res) => {
+router.post("/register", (req, res) => {
   const userEntry = {};
   const username = req.body.username;
   const password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
 
-  const createdUser = await Users.create(userEntry);
-  req.session.username = createdUser.username;
-  req.session.logged = true;
-  res.redirect("/");
+  userEntry.username = username;
+  userEntry.password = password;
+
+  Users.create(userEntry, (err, user) => {
+    console.log(userEntry);
+    console.log(user);
+    req.session.username = userEntry.username;
+    req.session.logged = true;
+    console.log(req.session);
+    res.redirect("/");
+  });
 });
   // Update User
 router.put("/:id", async (req, res) => {

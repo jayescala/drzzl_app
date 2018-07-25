@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const passwordSchema = new mongoose.Schema({
   password: String,
   hint: String,
-  createdDate: { type: Date, default: Date.now },
+  // createdDate: { type: Date, default: Date.now },
   createdBy: String,
   modifiedDate: Date,
   modifiedBy: String
