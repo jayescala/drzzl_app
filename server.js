@@ -6,7 +6,7 @@ const session = require("express-session");
 const request = require("superagent");
 
 // Models
-const User = require("./models/users.js");
+const Users = require("./models/users.js");
 
 // Application
 const app = express();
@@ -14,17 +14,29 @@ const app = express();
 // mongodb Connection
 require("./db/db.js");
 
+app.use((req, res, next) => {
+  next();
+});
+
 // Middleware
+// express-session
+  app.use(session({
+    secret: "This is a random secret string that you make up",
+    resave: false,
+    saveUninitialized: false
+}));
   // body-parser
 app.use(bodyParser.urlencoded({extended: false}));
   // method-override
 app.use(methodOverride('_method'));
-  // express-session
-app.use(session({
-  secret: "This is a random secret string that you make up",
-  resave: false,
-  saveUninitialized: false
-}));
+
+// Controllers
+  // user
+const userController = require("./controllers/userController.js");
+app.use("/user", userController);
+  // content
+const contentController = require("./controllers/contentController.js");
+app.use("/content", contentController);
 
 // Static Routes
   // css
@@ -56,7 +68,6 @@ app.post("/login", async (req, res) => {
   }
 });
 
-http://api.ipinfodb.com/v3/ip-city/?key=YOUR_API_KEY&ip=IP_V4_OR_IPV6_ADDRESS
 // APIs
   // InfoDB API
 app.get("/infodb", (req, res) => {

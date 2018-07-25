@@ -1,5 +1,5 @@
 // Imports
-const require = require("express");
+const express = require("express");
 
 // Models
 const Contents = require("../models/contents.js");
@@ -7,7 +7,7 @@ const Users = require("../models/users.js");
 const Comments = require("../models/comments.js");
 
 // Router
-const router = express.Router;
+const router = express.Router();
 
 // Routes
   // Render Index Page
