@@ -223,6 +223,24 @@ div {
 
 
 
+/* Upload Div Styles */
+.uploadDiv {
+  height: 20vh;
+  background-color: rgba(77,107,120,1)
+}
+/* End of Upload Div Styles */
+
+
+
+/* Sign On Styles */
+.signOnDiv {
+  height: 20vh;
+  background-color: rgba(77,107,120,1)
+}
+/* End of Sign On Styles */
+
+
+
 /* Footer Styles */
 footer {
   width:100%;
