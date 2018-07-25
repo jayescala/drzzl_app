@@ -120,7 +120,6 @@ div {
 }
 .drzzl {
   filter: drop-shadow(3px 3px 10px #000);
-  /* width: 200px; */
   justify-content: flex-start;
 }
 .tempt {
@@ -129,9 +128,18 @@ div {
 .weatherStatus {
   width: 30vw;
 }
+.button {
+  color: white;
+  padding: 20px 30px;
+  margin: 40px;
+  font-size: 1em;
+  font-family: quicksand, sans-serif;
+  text-align: center;
+  border: 1px solid white;
+  background-color: rgba(0,0,0,0);
+  box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5);
+}
 
-
-/* End of Hero Div Styles */
 
 
 
@@ -154,6 +162,14 @@ div {
 .quoteDiv {
   height: 50vh;
   background-color: #254350;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  color: #fdfff8;
+}
+.quoteDiv2 {
+  height: 50vh;
+  background-color: #5b6862;
   display: flex;
   justify-content: center;
   flex-flow: column;
@@ -225,8 +241,10 @@ div {
 
 /* Upload Div Styles */
 .uploadDiv {
-  height: 20vh;
-  background-color: rgba(77,107,120,1)
+  height: 80vh;
+  background-color: #a0b6ab;
+  display: flex;
+  flex-flow: column;
 }
 /* End of Upload Div Styles */
 
