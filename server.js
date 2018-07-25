@@ -26,6 +26,12 @@ app.use(session({
   saveUninitialized: false
 }));
 
+// Static Routes
+  // css
+app.use("/css", express.static("css"));
+  // images
+app.use("/images", express.static("images"));
+
 // Routes
   // Home Page
 app.get("/", (req, res) => {
@@ -49,14 +55,28 @@ app.post("/login", async (req, res) => {
     res.redirect("/login");
   }
 });
-  // Weather API Page
+
+http://api.ipinfodb.com/v3/ip-city/?key=YOUR_API_KEY&ip=IP_V4_OR_IPV6_ADDRESS
+// APIs
+  // InfoDB API
+app.get("/infodb", (req, res) => {
+  const key = "85ea4177bfdf145e9d00b7fae23a7811e96a900028ea937a021f0d263e482c5f";
+  const ip = "12.106.183.66";
+  request
+    .get("http://api.ipinfodb.com/v3/ip-city/?key=" + key)
+    .end((err, data) => {
+      console.log(data.text);
+      res.json(JSON.parse(data.text));
+  });
+});
+  // Open Weather API
     // Current Weather Data
-app.get("/weather/:city", (req, res) => {
+app.get("/openweather/:city", (req, res) => {
   const key = "a0780696d685b485af6974df3e8011b7";
   request
     .get("http://api.openweathermap.org/data/2.5/weather?q=" + req.params.city + "&appid=" + key)
-    .end((err, response) => {
-      res.json(JSON.parse(response.text));
+    .end((err, data) => {
+      res.json(JSON.parse(data.text));
   });
 });
 
