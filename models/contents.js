@@ -11,7 +11,7 @@ const contentSchema = new mongoose.Schema({
   createdBy: String,
   modifiedDate: Date,
   modifiedBy: String,
-  comments: [Comment.Schema],
+  comments: [Comment.schema],
   tags: [String],
   link: String
 });

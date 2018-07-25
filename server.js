@@ -3,6 +3,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const session = require("express-session");
+const request = require("superagent");
+
+// Models
+const User = require("./models/users.js");
 
 // Application
 const app = express();
@@ -44,6 +48,16 @@ app.post("/login", async (req, res) => {
     req.session.message = "The username you had entered does not match any existing accounts.";
     res.redirect("/login");
   }
+});
+  // Weather API Page
+    // Current Weather Data
+app.get("/weather/:city", (req, res) => {
+  const key = "a0780696d685b485af6974df3e8011b7";
+  request
+    .get("http://api.openweathermap.org/data/2.5/weather?q=" + req.params.city + "&appid=" + key)
+    .end((err, response) => {
+      res.json(JSON.parse(response.text));
+  });
 });
 
 // Port Setup

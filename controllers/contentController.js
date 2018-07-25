@@ -11,7 +11,7 @@ const router = express.Router;
 
 // Routes
   // Render Index Page
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   const foundContents = await Contents.find({});
   res.render("content/index.ejs", {
     contents: foundContents
@@ -66,41 +66,7 @@ router.delete("/:id", async (req, res) => {
   }
   const deletedCommentsFromUser = await Users.comments.remove({_id: { $in: commentIds}});
 
-  res.redirect("/");
-});
-
-// Create Comment
-router.post("/", async (req, res) => {
-const newContent = req.body;
-// newContent.createdDate = Date.now;
-newContent.createdBy = req.session.username;
-
-const createdContent = await Contents.create(newContent);
-res.redirect("/content");
-});
-// Update Content
-router.put("/:id", async (req, res) => {
-const newContent = req.body;
-newContent.modifiedBy = req.session.username;
-newContent.modifiedDate = Date.now;
-
-const updatedContent = await Contents.findByIdAndUpdate(req.params.id, newContent, {new: true});
-res.redirect("/content");
-});
-// Delete Content
-router.delete("/:id", async (req, res) => {
-  // Delete Content
-const deletedContent = await Contents.findByIdAndRemove(req.params.id);
-  // Delete Content from User
-const deletedContentFromUser = await Users.contents.findByIdAndRemove(req.params.id);
-  // Delete Content Comments from Users
-const commentIds = [];
-for(let i = 0; i <= deletedContent.comments.length-1; i++){
-  commentIds.push(deletedContent.comments[i].id);
-}
-const deletedCommentsFromUser = await Users.comments.remove({_id: { $in: commentIds}});
-
-res.redirect("/");
+  res.redirect("/content");
 });
 
 // Exports
