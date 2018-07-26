@@ -2,13 +2,13 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 
+// Router
+const router = express.Router();
+
 // Models
 const Users = require("../models/users.js");
 const Contents = require("../models/contents.js");
 const Comments = require("../models/comments.js");
-
-// Router
-const router = express.Router();
 
 // Routes
   // Render Index Page
@@ -36,6 +36,26 @@ router.get("/update/:id", async (req, res) => {
     user: foundUser
   });
 });
+
+// Login User
+router.post("/login", async (req, res) => {
+  const loginUsername = Users.find({username: req.body.username});
+  if(loginUsername === true){
+    if(bcrypt.compareSync(req.body.password, username.password)){
+      req.session.username = req.body.username;
+      req.session.loggedIn = true;
+      req.session.message = "";
+      res.redirect("/");
+    } else {
+      req.session.message = "The password you have entered is incorrect.";
+      res.redirect("/login");
+    }
+  } else {
+    req.session.message = "The username you had entered does not match any existing accounts.";
+    res.redirect("/login");
+  }
+});
+
   // Create User
 router.post("/register", (req, res) => {
   const userEntry = {};
@@ -47,7 +67,8 @@ router.post("/register", (req, res) => {
 
   Users.create(userEntry, (err, user) => {
     console.log(userEntry);
-    console.log(user);
+    console.log(err + " - This is err.");
+    console.log(user + " - This is user.");
     req.session.username = userEntry.username;
     req.session.logged = true;
     console.log(req.session);
