@@ -23,12 +23,14 @@
     </nav>
     <!-- End of Nav Bar -->
 
+  <%# Only accessible if logged in and user is owner of content %>
     <div>
       <h3>Edit Your Photos</h3>
     </div>
-    <%= for (let i = 0; i < content.length; i++) {
-      content[i]
-    } %>
+  <%# Display photos that belong to that user%>
+  <%# add another photo button, points to upload Page %>
+  <%# if click on a photo, directs to that's photo show page %>
+  <%# delete photo button %>
 
     <!-- Quote Div -->
     <div class="quoteDiv2">
