@@ -38,10 +38,11 @@ app.use("/css", express.static("css"));
 app.use("/images", express.static("images"));
   // scripts
 app.use("/scripts", express.static("scripts"));
+
 // Routes
   // Home Page
 app.get("/", (req, res) => {
-  res.render("home/newhome.ejs");
+  res.render("home/home.ejs");
 });
 
 // APIs
