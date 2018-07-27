@@ -1,7 +1,7 @@
 // IP-API Data
 const getLocation = () => {
   $.ajax({
-    url: "http://localhost:3000/ip",
+    url: "https://drzzl.herokuapp.com/ip",
     method: "get",
     dataType: "json",
     success: function(res) {
@@ -21,7 +21,7 @@ const getLocation = () => {
 const getCurrentWeather = () => {
   console.log();
   $.ajax({
-    url: "http://localhost:3000/openweather/current/" + $("#city-name").text(),
+    url: "https://drzzl.herokuapp.com/openweather/current/" + $("#city-name").text(),
     method: "get",
     dataType: "json",
     success: function(data) {
@@ -38,7 +38,7 @@ const getCurrentWeather = () => {
 // Open Weather Forecast Data
 const rainCheck = () => {
   $.ajax({
-    url: "http://localhost:3000/openweather/forecast/" + $("#city-name").text(),
+    url: "https://drzzl.herokuapp.com/openweather/forecast/" + $("#city-name").text(),
     method: "get",
     dataType: "json",
     success: function(data) {
@@ -65,7 +65,7 @@ const rainCheck = () => {
 // Reddit Data
 const displayRedditFeed = () => {
   $.ajax({
-    url: "http://localhost:3000/reddit/",
+    url: "https://drzzl.herokuapp.com/reddit/",
     method: "get",
     dataType: "json",
     success: function(data) {
