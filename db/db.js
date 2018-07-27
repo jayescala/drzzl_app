@@ -1,7 +1,7 @@
 // Imports
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/drzzl");
+mongoose.connect("mongodb://localhost:27017/drzzl", { useNewUrlParser: true });
 
 mongoose.connection.on("connected", () => {
   console.log("mongoose is connected");

@@ -1,69 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
-    <meta charset="utf-8">
-    <title>drzzl - for rainy days</title>
+<% include ../partials/head %>
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300i" rel="stylesheet">
-</head>
-
-<body>
+  <body>
 
     <!-- Hero Div -->
     <div class="heroPage">
-        <div class="heroImage">
-            <div class="heroOverlay">
+      <div class="heroImage">
+        <div class="heroOverlay">
 
-                <nav>
-                    <ul class="navBar">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/user/create">Upload</a>
-                            <li><a href="/user/create">Sign On</a></li>
-                    </ul>
-                </nav>
+          <nav>
+            <ul class="navBar">
+              <li><a href="/">Home</a></li>
+              <li><a href="/user/create">Upload</a></li>
+              <li><a href="/user/create">Sign In</a></li>
+            </ul>
+          </nav>
 
-                <div class="heroContent">
-                    <img class="svg raindrop" src="./Images/WeatherIcons/tint-solid.svg">
+          <div class="heroContent">
 
-                    <div class="drzzl">
-                        <img src="./images/logos/drzzlLogoColor.svg">
-                    </div>
+            <div class="drzzl">
+              <img class="svg raindrop" src="./images/WeatherIcons/tint-solid.svg">
+              <img src="./images/logos/drzzlLogoColor.svg">
+            </div>
 
-                    <div class="temp">
-                        <h1 class="temperature">Currently it is: XXX&#176;F</h1>
-                    </div>
-
-                    <div class="weatherStatus">
-                        <h5 class="weatherCondition">(Sadly, it is not raining)</h5>
-                    </div>
-                </div>
+            <div id="weather-display">
+              <div class="weather-items" id="city-name"></div>
+              <div class="weather-items" id="temperature"></div>
+              <div class="weather-items" id="weather"></div>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- End of Hero Div -->
+      </div>
+      <!-- End of Hero Div -->
 
-    <!-- Gallery Div -->
-    <div class="galleryDiv">
+      <!-- Gallery Div -->
+      <div class="galleryDiv">
         <div class="galleryOverlay">
-            <h3>drzzl Gallery</h3>
-            <div>
-                <img class="svg" src="./images/WeatherIcons/umbrella-solid.svg">
-                <img class="svg" src="./images/WeatherIcons/umbrella-solid.svg">
-                <img class="svg" src="./images/WeatherIcons/umbrella-solid.svg">
-                <img class="svg" src="./images/WeatherIcons/umbrella-solid.svg">
-            </div>
-            <div>
-                <img class="svg" src="./images/WeatherIcons/umbrella-solid.svg">
-                <img class="svg" src="./images/WeatherIcons/umbrella-solid.svg">
-                <img class="svg" src="./images/WeatherIcons/umbrella-solid.svg">
-                <img class="svg" src="./images/WeatherIcons/umbrella-solid.svg">
-            </div>
+          <h3>drzzl Gallery</h3>
+          <div id="gallery-row-1">
+            <!-- <img class="svg" id="gallery-top-image-1" src="./images/WeatherIcons/umbrella-solid.svg">
+                <img class="svg" id="gallery-top-image-2" src="./images/WeatherIcons/umbrella-solid.svg">
+                <img class="svg" id="gallery-top-image-3" src="./images/WeatherIcons/umbrella-solid.svg">
+                <img class="svg" id="gallery-top-image-4" src="./images/WeatherIcons/umbrella-solid.svg"> -->
+          </div>
+          <div id="gallery-row-2">
+            <!-- <img class="svg" id="gallery-bottom-image-1" src="./images/WeatherIcons/umbrella-solid.svg">
+                <img class="svg" id="gallery-bottom-image-2" src="./images/WeatherIcons/umbrella-solid.svg">
+                <img class="svg" id="gallery-bottom-image-3" src="./images/WeatherIcons/umbrella-solid.svg">
+                <img class="svg" id="gallery-bottom-image-4" src="./images/WeatherIcons/umbrella-solid.svg"> -->
+          </div>
         </div>
-    </div>
-<%# <!--
+      </div>
+      <%# <!--
 
   for (let[i], [i] < 0, array.length)
 
@@ -72,61 +62,60 @@
 
 
 
-    <!-- End of Gallery Div -->
+        <!-- End of Gallery Div -->
 
-    <!-- Quote Div -->
-    <div class="quoteDiv">
-        <p class="quote">"Some people walk in the rain, others just get wet."</p>
-        <p class="citation">- Roger Miller</p>
-    </div>
-    <!-- End of Quote Div -->
+        <!-- Quote Div -->
+        <div class="quoteDiv">
+          <p class="quote">"Some people walk in the rain, others just get wet."</p>
+          <p class="citation">- Roger Miller</p>
+        </div>
+        <!-- End of Quote Div -->
 
-    <!-- About Div -->
-    <div class="aboutDiv">
-        <div class="aboutOverlay">
+        <!-- About Div -->
+        <div class="aboutDiv">
+          <div class="aboutOverlay">
             <h3>About drzzl</h3>
             <h4>Made With</h4>
             <div>
-                <img class="svg" src="./images/codeIcons/html5-brands.svg">
-                <img class="svg" src="./images/codeIcons/css3-alt-brands.svg">
-                <img class="svg" src="./images/codeIcons/js-square-brands.svg">
-                <img class="svg" src="./images/codeIcons/node-js-brands.svg">
+              <img class="svg" src="./images/codeIcons/html5-brands.svg">
+              <img class="svg" src="./images/codeIcons/css3-alt-brands.svg">
+              <img class="svg" src="./images/codeIcons/js-square-brands.svg">
+              <img class="svg" src="./images/codeIcons/node-js-brands.svg">
             </div>
             <p>And more...</p>
+          </div>
         </div>
-    </div>
-    <!-- End of About Div -->
+        <!-- End of About Div -->
 
-    <!-- Contact Div -->
-    <div class="contactDiv">
-        <div class="contactOverlay">
+        <!-- Contact Div -->
+        <div class="contactDiv">
+          <div class="contactOverlay">
             <div class="contactUs">
-                <h3>Contact Us</h3>
-                <p>We are available for mad love or hate mail at either of our Githubs or at <a href="#">hello@drzzl.io</a>.</p>
+              <h3>Contact Us</h3>
+              <p>We are available for mad love or hate mail at either of our Githubs or at <a href="#">hello@drzzl.io</a>.</p>
             </div>
 
             <div>
-                <div class="contactDavid">
-                    <h4>David Kolia</h4>
-                    <img class="svg" src="./images/codeIcons/user-tie-solid.svg">
-                    <p>A photographer, designer and web developer, David enjoys rainy days so much his white noise machine is getting tired of playing thunderstorms and light rain every evening.</p>
-                </div>
-                <div class="contactJay">
-                    <h4>Jay Escala</h4>
-                    <img class="svg" src="./images/codeIcons/user-tie-solid.svg">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet odio vitae metus commodo porta. Maecenas pretium rhoncus vehicula. Fusce vestibulum tristique enim.</p>
-                </div>
+              <div class="contactDavid">
+                <h4>David Kolia</h4>
+                <img class="svg" src="./images/codeIcons/user-tie-solid.svg">
+                <p>A photographer, designer and web developer, David enjoys rainy days so much his white noise machine is getting tired of playing thunderstorms and light rain every evening.</p>
+              </div>
+              <div class="contactJay">
+                <h4>Jay Escala</h4>
+                <img class="svg" src="./images/codeIcons/user-tie-solid.svg">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet odio vitae metus commodo porta. Maecenas pretium rhoncus vehicula. Fusce vestibulum tristique enim.</p>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    <!-- End of Contact Div -->
+        <!-- End of Contact Div -->
 
-    <!-- Footer -->
-    <footer>
+        <!-- Footer -->
         <% include ../partials/footer.ejs  %>
-    </footer>
-    <!-- End of Footer -->
+          <!-- End of Footer -->
 
-</body>
+  </body>
+  <script type="text/javascript" src="scripts/weather.js"></script>
 
 </html>

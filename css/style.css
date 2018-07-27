@@ -125,13 +125,17 @@ div {
 .heroContent {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
 }
 .raindrop {
-  width: 200px;
+  width: 100px;
 }
 .drzzl {
   filter: drop-shadow(3px 3px 10px #000);
   justify-content: flex-start;
+  position: relative;
+  right: -5vw;
 }
 .tempt {
   width: 30vw;
@@ -139,6 +143,20 @@ div {
 .weatherStatus {
   width: 30vw;
 }
+#weather-display {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 300px;
+  width: 500px;
+  position: relative;
+  right: 5vw;
+}
+.weather-items {
+  width: 500px;
+  margin: -30px 10px;
+}
+
 .button {
   color: white;
   padding: 20px 30px;
@@ -167,6 +185,12 @@ div {
   height: 50vh;
   background-color: rgba(160,182,171,.4);
   flex-flow: column;
+}
+.gallery-image {
+  overflow: hidden;
+  height: 110px;
+  width: 110px;
+  margin: 10px 30px;
 }
 /* End of Gallery Div Styles */
 

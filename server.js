@@ -75,6 +75,14 @@ app.get("/openweather/forecast/:city", (req, res) => {
       res.json(JSON.parse(data.text));
   });
 });
+  // Reddit Data
+app.get("/reddit", (req, res) => {
+  const spawn = require("child_process").spawn;
+  const process = spawn("python", ["./scripts/reddit.py"]);
+  process.stdout.on("data", (data) => {
+    res.json(JSON.parse(data));
+  });
+});
 
 // Port Setup
 const port = 3000;
