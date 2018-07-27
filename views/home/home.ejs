@@ -22,7 +22,7 @@
                     <ul class="navBar">
                         <li><a href="/">Home</a></li>
                         <li><a href="/user/create">Upload</a>
-                            <li><a href="/user/create">Sign In</a></li>
+                            <li><a href="/user/create">Sign On</a></li>
                     </ul>
                 </nav>
 
@@ -34,36 +34,13 @@
                     </div>
 
                     <div class="temp">
-                        <h1>Currently it is: 65 &#176;F</h1>
+                        <h1 class="temperature">Currently it is: XXX&#176;F</h1>
                     </div>
 
                     <div class="weatherStatus">
-                        <h5>(Sadly, it is not raining)</h5>
+                        <h5 class="weatherCondition">(Sadly, it is not raining)</h5>
                     </div>
-
-
                 </div>
-
-            <div class="heroContent">
-              <img class="svg raindrop" src="./Images/WeatherIcons/tint-solid.svg">
-
-
-              <div class="drzzl">
-                <img src="./images/logos/drzzlLogoColor.svg">
-              </div>
-
-
-              <div class="temp">
-              <h1>Currently it is: <span id="weather-output"></span> &#176;F</h1>
-              </div>
-
-
-              <div class="weatherStatus">
-              <h5>(Sadly, it is not raining)</h5>
-              </div>
-
-
-            </div>
         </div>
     </div>
     <!-- End of Hero Div -->
@@ -146,9 +123,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&#169; 2018</p>
-        <p>Made in Chicago</p>
-        <p><a href="https://goo.gl/SDr6QG">Github</a></p>
+        <% include ../partials/footer.ejs  %>
     </footer>
     <!-- End of Footer -->
 
