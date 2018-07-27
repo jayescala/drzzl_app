@@ -65,7 +65,7 @@ const rainCheck = () => {
 // Reddit Data
 const displayRedditFeed = () => {
   $.ajax({
-    url: "https://drzzl.herokuapp.com/reddit/",
+    url: "https://drzzl.herokuapp.com/reddit",
     method: "get",
     dataType: "json",
     success: function(data) {
