@@ -85,7 +85,7 @@ app.get("/reddit", (req, res) => {
 });
 
 // Port Setup
-const port = 3000;
+const port = process.env.port || 3000;
 app.listen(port, () => {
   const timestamp = (new Date(Date.now())).toLocaleString();
   console.log(timestamp + ": running on port " + port);

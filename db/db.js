@@ -1,7 +1,9 @@
 // Imports
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/drzzl", { useNewUrlParser: true });
+const mongoUri = process.env.MONGODB_URI || "mongodb://localhost:27017/partials-db";
+
+mongoose.connect(mongoUri, { useNewUrlParser: true });
 
 mongoose.connection.on("connected", () => {
   console.log("mongoose is connected");
