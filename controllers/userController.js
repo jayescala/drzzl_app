@@ -20,7 +20,9 @@ router.get("/", async (req, res) => {
 });
   // Render New Page
 router.get("/create", (req, res) => {
-  res.render("user/new.ejs");
+  res.render("user/new.ejs", {
+    message: req.session.message
+  });
 });
   // Render Show Page
 router.get("/:id", async (req, res) => {
@@ -38,26 +40,26 @@ router.get("/update/:id", async (req, res) => {
 });
 
 // Login User
-router.post("/login", async (req, res) => {
-  const loginUsername = Users.find({username: req.body.username});
+router.post("/login", (req, res) => {
+  const loginUsername = Users.findOne({username: req.body.username});
   if(loginUsername === true){
-    if(bcrypt.compareSync(req.body.password, username.password)){
+    if(bcrypt.compareSync(req.body.password, loginUsername.password)){
       req.session.username = req.body.username;
       req.session.loggedIn = true;
       req.session.message = "";
       res.redirect("/");
     } else {
       req.session.message = "The password you have entered is incorrect.";
-      res.redirect("/login");
+      res.redirect("/user/login");
     }
   } else {
     req.session.message = "The username you had entered does not match any existing accounts.";
-    res.redirect("/login");
+    res.redirect("/user/login");
   }
 });
 
   // Create User
-router.post("/register", (req, res) => {
+router.post("/register", async (req, res) => {
   const userEntry = {};
   const username = req.body.username;
   const password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
@@ -65,15 +67,20 @@ router.post("/register", (req, res) => {
   userEntry.username = username;
   userEntry.password = password;
 
-  Users.create(userEntry, (err, user) => {
-    console.log(userEntry);
-    console.log(err + " - This is err.");
-    console.log(user + " - This is user.");
-    req.session.username = userEntry.username;
-    req.session.logged = true;
-    console.log(req.session);
-    res.redirect("/");
-  });
+  const registerUsername = await Users.findOne({username: req.body.username});
+  console.log(registerUsername);
+  if(registerUsername === true){
+    req.session.message = "The username you had entered is already in use.";
+    res.redirect("/user/login");
+  } else {
+    Users.create(userEntry, (err, user) => {
+
+      req.session.username = userEntry.username;
+      req.session.logged = true;
+
+      res.redirect("/");
+    });
+  }
 });
   // Update User
 router.put("/:id", async (req, res) => {
@@ -98,6 +105,16 @@ router.delete("/:id", async (req, res) => {
   const deletedComments = await Contents.comments.remove({_id: { $in: commentIds}});
 
   res.redirect("/");
+});
+
+router.get("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if(err){
+      res.send("error destroying session");
+    } else {
+      res.redirect("/user");
+    }
+  });
 });
 
 // Exports

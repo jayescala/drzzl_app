@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
   <% include ../partials/head %>
-</head>
 
 <body>
 
@@ -13,7 +11,7 @@
             <nav>
                 <ul class="navBar">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/user/create">Upload</a>
+                    <li><a href="/user/create">Upload</a></li>
                     <li><a href="/user/create">Sign In</a></li>
                 </ul>
             </nav>
@@ -37,8 +35,8 @@
       <div class="register passwordSignOn">
         Password: <input type="password" name="password">
       </div>
+      <button class="button" type="submit">Sign On</button>
     </form>
-    <button class="button" type="submit">Sign On</button>
   </div>
   <div>
     <p>Are you new around here? Great! Please register with your name, email, and password below. drzzl is available for free, and we do not have annoying mailers, spam, or otherwise any evil intent.</p>
@@ -55,6 +53,7 @@
       <button class="button" type="reset">Reset Fields</button>
     </form>
   </div>
+  <p> <%= message %> </p>
 </div>
 <!-- End of Sign On Div -->
 
@@ -75,9 +74,7 @@
 
 
 <!-- Footer -->
-<footer>
   <% include ../partials/footer %>
-</footer>
 <!-- End of Footer -->
 
 

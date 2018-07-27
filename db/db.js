@@ -1,7 +1,8 @@
 // Imports
 const mongoose = require("mongoose");
+const mongoUri = process.env.MONGODB_URI || "mongodb://localhost:27017/drzzl";
 
-mongoose.connect("mongodb://localhost/drzzl");
+mongoose.connect(mongoUri, { useNewUrlParser: true });
 
 mongoose.connection.on("connected", () => {
   console.log("mongoose is connected");
