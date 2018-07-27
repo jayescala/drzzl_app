@@ -41,7 +41,7 @@ app.use("/scripts", express.static("scripts"));
 // Routes
   // Home Page
 app.get("/", (req, res) => {
-  res.render("home/newhome.ejs");
+  res.render("home/home.ejs");
 });
 
 // APIs

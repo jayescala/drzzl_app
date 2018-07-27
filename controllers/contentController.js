@@ -38,10 +38,14 @@ router.get("/update/:id", async (req, res) => {
   // Create Content
 router.post("/", async (req, res) => {
   const newContent = req.body;
-  // newContent.createdDate = Date.now;
   newContent.createdBy = req.session.username;
 
   const createdContent = await Contents.create(newContent);
+
+  const foundUser = await Users.findById(req.body.userId);
+  foundUser.contents.push(createdContent);
+  foundUser.save();
+
   res.redirect("/content");
 });
   // Update Content
@@ -51,6 +55,7 @@ router.put("/:id", async (req, res) => {
   newContent.modifiedDate = Date.now;
 
   const updatedContent = await Contents.findByIdAndUpdate(req.params.id, newContent, {new: true});
+
   res.redirect("/content");
 });
   // Delete Content
@@ -67,6 +72,41 @@ router.delete("/:id", async (req, res) => {
   const deletedCommentsFromUser = await Users.comments.remove({_id: { $in: commentIds}});
 
   res.redirect("/content");
+});
+
+ // COMMENTS
+
+// Create Comment
+router.post("/:id", async (req, res) => {
+ // newComment.createdDate = Date.now;
+newComment.createdBy = req.session.username;
+
+const createdComment = await Comments.create(newComment);
+res.redirect("/content");
+});
+// Update Comment
+router.put("/:id", async (req, res) => {
+const newComment = req.body;
+newComment.modifiedBy = req.session.username;
+newComment.modifiedDate = Date.now;
+
+const updatedComment = await Comments.findByIdAndUpdate(req.params.id, newComment, {new: true});
+res.redirect("/content");
+});
+// Delete Comment
+router.delete("/:id", async (req, res) => {
+  // Delete Comment
+const deletedComment = await Comments.findByIdAndRemove(req.params.id);
+  // Delete Comment from Content
+const deletedCommentsFromUser = await Users.comments.findByIdAndRemove(req.params.id);
+  // Delete Comments from User
+const commentIds = [];
+for(let i = 0; i <= deletedComment.comments.length-1; i++){
+  commentIds.push(deletedComment.comments[i].id);
+}
+const deletedCommentsFromUser = await Users.comments.remove({_id: { $in: commentIds}});
+
+res.redirect("/content");
 });
 
 // Exports
