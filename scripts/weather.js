@@ -69,6 +69,13 @@ const displayRedditFeed = () => {
     method: "get",
     dataType: "json",
     success: function(data) {
+      console.log("hit the success function")
+      console.log("hit the success function")
+      console.log("hit the success function")
+      console.log("hit the success function")
+      console.log("hit the success function")
+      console.log("hit the success function")
+      console.log("hit the success function")
       for(i = 0; i < 4; i++){
         let $img = $("<img>").attr("src", data.list[i].thumbnail).addClass("gallery-image");
         let $a = $("<a>").attr("href", data.list[i].url);
@@ -83,6 +90,11 @@ const displayRedditFeed = () => {
       }
     },
     fail: function(err) {
+      console.log("hit the fail function")
+      console.log("hit the fail function")
+      console.log("hit the fail function")
+      console.log("hit the fail function")
+      console.log("hit the fail function")
       console.log(err);
       $(".weatherCondition").empty();
     }
