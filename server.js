@@ -5,6 +5,8 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const request = require("superagent");
 
+const PORT = process.env.PORT || 3000;
+
 // Application
 const app = express();
 
@@ -85,7 +87,11 @@ app.get("/reddit", (req, res) => {
 });
 
 // Port Setup
+<<<<<<< HEAD
 const PORT = process.env.PORT || 3000;
+=======
+
+>>>>>>> d2bbb411ffebeebf7f96f5989a025a086e569ff0
 app.listen(PORT, () => {
   const timestamp = (new Date(Date.now())).toLocaleString();
   console.log(timestamp + ": running on port " + PORT);
